@@ -37,34 +37,43 @@
 
 |   Concept   |         Description or short answer         |
 |     ---     |                     ---                     |
-|What is the purpose of having different environments?     |(enter description or short answer here)|
-|What is the default package manager in Python?            |(enter description or short answer here)|
-|How do you manage environments and packages in Anaconda?  |(enter description or short answer here)|
-|`conda list`       |(enter description or short answer here)|
-|`conda env list`       |(enter description or short answer here)|
-|How do you keep your base environment unchanged?       |(enter description or short answer here)|
-|What is the link to the Conda cheat sheet? (link in video notes is broken)      |(enter description or short answer here)|
-|`conda create --name XXXX`       |(enter description or short answer here)|
-|`source activate XXXX`       |(enter description or short answer here)|
-|`conda install YYYY`       |(enter description or short answer here)|
-|channels in Conda       |(enter description or short answer here)|
-|`conda install -c ZZZZ YYYY`       |(enter description or short answer here)|
-|`conda config --show channels`       |(enter description or short answer here)|
-|`conda config --add channels ZZZZ`       |(enter description or short answer here)|
-|conda-forge.org       |(enter description or short answer here)|
-|`source deactivate`       |(enter description or short answer here)|
-|`conda config --get channels`       |(enter description or short answer here)|
+|What is the purpose of having different environments?     |environments are used to keep different programing purposes in python separate, like web design or data analysis|
+|What is the default package manager in Python?            |pip - python  integrated package manager|
+|How do you manage environments and packages in Anaconda?  |with the use of Conda which does both, but you can also use Conda for data analysis|
+|`conda list`       |this shows all the default packages installed|
+|`conda env list`       |this shows all the environments you have created|
+|How do you keep your base environment unchanged?       |create different environments|
+|What is the link to the Conda cheat sheet? (link in video notes is broken)      |https://conda.io/projects/conda/en/latest/user-guide/cheatsheet.html|
+|`conda create --name XXXX`       |create and namea a new environment|
+|`source activate XXXX`       |this activates the enviornment you want to use, must have the environment name, mine is "conda activate"|
+|`conda install YYYY`       |this installs the packages you want to use, have to know the name of the package|
+|channels in Conda       |the path or location where conda looks for packages|
+|`conda install -c ZZZZ YYYY`       |install different channels were conda can look for packages|
+|`conda config --show channels`       |this shows the channels installed which is the path that conda uses to look for packages|
+|`conda config --add channels ZZZZ`       |this adds the channel to the channel list|
+|conda-forge.org       |community led collection of packages only available from the forge website|
+|`source deactivate`       |turns off whatever environment you are in and brings you back to your base environment|
+|`conda config --get channels`       |this shows which channel will be searched frist, as they are given priotiues |
 
 * After creating the environments he created in the video on your computer, what would the results of running the command `conda env list` look like with the da35 environment activated. Paste the output from your command prompt in the code block below.
 
 ```
-#Paste your results here.
+(base) C:\Users\danni>conda activate da35
+
+(da35) C:\Users\danni>conda env list
+# conda environments:
+#
+base                     C:\Users\danni\anaconda3
+ai378                    C:\Users\danni\anaconda3\envs\ai378
+da35                  *  C:\Users\danni\anaconda3\envs\da35
 
 
 ```
 * What command would you use to remove the environments you created for this exercise from your computer?
 
 ```
-#Type the command here.
+conda remove --name ai378 --all
+conda remove --name da35 --all
+
 
 ```
